@@ -1,4 +1,6 @@
 function makeGrid (cSize) {
+    document.querySelectorAll('td').forEach(e => e.remove());
+    document.querySelectorAll('tr').forEach(e => e.remove());
     let tbl = document.getElementById('canvasGrid')
 
     for(let i=0; i < cSize; i++) {
@@ -14,43 +16,31 @@ function makeGrid (cSize) {
     }
 }
 
+let r = 0
+let g = 0
+let b = 0
+let a = 1
 
-makeGrid(16)
+const gridButton = document.querySelector('#gridder');
+gridButton.addEventListener('click', function (e) { 
+    let gridSize = (prompt('Grid Size:'))
+    if (!isNaN(gridSize) && gridSize < 65) {
+
+        makeGrid(gridSize)
+        const cells = document.querySelectorAll('td');
+
+        for (const box of cells) {
+            box.addEventListener('mouseover', function handleClick() {
+                box.style.backgroundColor = 'rgba(' + r + ',' + g + ','  + b + ', ' + a + ')';
+                r = Math.floor(Math.random() * 256);
+                g = Math.floor(Math.random() * 256);
+                b = Math.floor(Math.random() * 256);
+        });
+        }
+    }
+    else {
+        alert('Please Select a Number up to 64')
+    }
+} );
 
 const cells = document.querySelectorAll('td');
-
-for (const box of cells) {
-    box.addEventListener('mouseover', function handleClick() {
-        box.classList.add(color);
-  });
-}
-
-const yellow = document.querySelector('#yellow');
-yellow.addEventListener('click', function (e) { 
-    color = 'yellow'
-} );
-
-const green = document.querySelector('#green');
-green.addEventListener('click', function (e) { 
-    color = 'green'
-} );
-
-const blue = document.querySelector('#blue');
-blue.addEventListener('click', function (e) { 
-    color = 'blue'
-} );
-
-const purple = document.querySelector('#purple');
-purple.addEventListener('click', function (e) { 
-    color = 'purple'
-} );
-
-const red = document.querySelector('#red');
-red.addEventListener('click', function (e) { 
-    color = 'red'
-} );
-
-const orange = document.querySelector('#orange');
-orange.addEventListener('click', function (e) { 
-    color = 'orange'
-} );
