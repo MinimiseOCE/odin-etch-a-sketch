@@ -6,7 +6,10 @@ body {
 }
 
 tr, td {
-    background-color: rgb(245, 245, 245);
+    background-color: #ada7a9;
+    border: 0cm;
+    padding: 0%;
+    margin: 0%;
 }
 
 .yellow {
@@ -29,53 +32,6 @@ tr, td {
     background-color: red;
 }
 
-
-.orange {
-    background-color: orange;
-    width: 25px;
-    height: 25px;
-}
-
-#yellow {
-    background-color: yellow;
-    width: 25px;
-    height: 25px;
-}
-
-#green {
-    background-color: green;
-    width: 25px;
-    height: 25px;
-}
-
-#blue {
-    background-color: blue;
-    width: 25px;
-    height: 25px;
-}
-
-#purple {
-    background-color: purple;
-    width: 25px;
-    height: 25px;
-}
-
-#red {
-    background-color: red;
-    width: 25px;
-    height: 25px;
-}
-
-#orange {
-    background-color: orange;
-    width: 25px;
-    height: 25px;
-}
-
-.colors {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
 table {
     width: 100%;
