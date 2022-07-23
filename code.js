@@ -30,7 +30,7 @@ gridButton.addEventListener('click', function (e) {
         const cells = document.querySelectorAll('td');
 
         for (const box of cells) {
-            box.addEventListener('mouseover', function handleClick() {
+            box.addEventListener('click', function handleClick() {
                 box.style.backgroundColor = 'rgba(' + r + ',' + g + ','  + b + ', ' + a + ')';
                 r = Math.floor(Math.random() * 256);
                 g = Math.floor(Math.random() * 256);
